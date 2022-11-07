@@ -31,8 +31,11 @@
 
         if ($success) {
             # Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Terima Kasih! Mesej anda telah dihantar.";
+            
+            echo "Thank you for your message";
+   sleep(2); // sleep for 2 seconds. Enough to display success message
+   //header will execute after 2000ms(2s)
+   header("location: index.html");
         } else {
             # Set a 500 (internal server error) response code.
             http_response_code(500);
